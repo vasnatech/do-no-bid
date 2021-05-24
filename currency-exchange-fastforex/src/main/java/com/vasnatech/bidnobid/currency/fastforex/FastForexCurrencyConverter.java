@@ -5,7 +5,6 @@ import com.vasnatech.commons.http.HttpClientException;
 import com.vasnatech.donobid.log.Logger;
 
 import java.math.BigDecimal;
-import java.util.Currency;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -41,12 +40,11 @@ public class FastForexCurrencyConverter extends ExchangeRateCurrencyConverter {
         executorService.shutdown();
     }
 
-
     public static void main(String[] args) throws InterruptedException {
         FastForexCurrencyConverter converter = new FastForexCurrencyConverter("USD");
+        Thread.sleep(2000);
         for (int index=0; index<100; ++index) {
-            Thread.sleep(1000);
-            BigDecimal rate = converter.convert(new BigDecimal("100.00"), "TRY", "CAD");
+            BigDecimal rate = converter.convert(new BigDecimal("1.00"), "CAD", "TRY");
             System.out.println(rate);
             Thread.sleep(1000);
         }

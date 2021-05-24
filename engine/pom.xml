@@ -10,7 +10,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>donobid-currency-exchange-fastforex</artifactId>
+    <artifactId>donobid-engine</artifactId>
     <packaging>jar</packaging>
 
     <properties>
@@ -19,20 +19,14 @@
     <dependencies>
         <dependency>
             <groupId>com.vasnatech</groupId>
-            <artifactId>commons-collection</artifactId>
+            <artifactId>commons-event</artifactId>
             <version>${com.vasnatech.commons.version}</version>
         </dependency>
         <dependency>
             <groupId>com.vasnatech</groupId>
-            <artifactId>commons-json-jackson</artifactId>
+            <artifactId>commons-queue</artifactId>
             <version>${com.vasnatech.commons.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.vasnatech</groupId>
-            <artifactId>commons-http-jdk</artifactId>
-            <version>${com.vasnatech.commons.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>com.vasnatech.donobid</groupId>
             <artifactId>donobid-log</artifactId>
@@ -63,6 +57,5 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
 
 </project>
